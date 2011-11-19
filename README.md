@@ -23,6 +23,14 @@ Versioning
 Pluging version pattern is (jq-mobile-version).(plugin-version)
 
 
+NOTE
+----
+
+jQueryMobile 1.0 supports jQuery core 1.6.4 only.
+(see http://jquerymobile.com/blog/2011/11/16/announcing-jquery-mobile-1-0/#upgrade)
+Plugin overrides jquery resource module to jQuery core v1.6.4
+
+
 Copyright and License
 ---------------------
 
