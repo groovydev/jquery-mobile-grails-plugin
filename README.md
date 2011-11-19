@@ -20,7 +20,7 @@ Usage
 Versioning
 ----------
 
-Pluging version pattern is <jq-mobile-version>.<plugin-version>
+Pluging version pattern is (jq-mobile-version).(plugin-version)
 
 
 Copyright and License
