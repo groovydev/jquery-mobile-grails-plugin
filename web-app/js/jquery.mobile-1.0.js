@@ -1,5 +1,5 @@
 /*
-* jQuery Mobile Framework Git Build: SHA1: ed6a08489708b68de614ddd5bf2f6f4bfd1cb36a <> Date: Thu Nov 17 11:25:15 2011 -0500
+* jQuery Mobile Framework 1.0
 * http://jquerymobile.com
 *
 * Copyright 2011 (c) jQuery Project
@@ -3859,8 +3859,7 @@ $.widget( "mobile.collapsible", $.mobile.widget, {
 			collapsible = $el.addClass( "ui-collapsible" ),
 			collapsibleHeading = $el.children( o.heading ).first(),
 			collapsibleContent = collapsible.wrapInner( "<div class='ui-collapsible-content'></div>" ).find( ".ui-collapsible-content" ),
-			collapsibleSet = $el.closest( ":jqmData(role='collapsible-set')" ).addClass( "ui-collapsible-set" ),
-			collapsiblesInSet = collapsibleSet.children( ":jqmData(role='collapsible')" );
+			collapsibleSet = $el.closest( ":jqmData(role='collapsible-set')" ).addClass( "ui-collapsible-set" );
 
 		// Replace collapsibleHeading if it's a legend
 		if ( collapsibleHeading.is( "legend" ) ) {
@@ -3897,52 +3896,9 @@ $.widget( "mobile.collapsible", $.mobile.widget, {
 					iconPos: "left",
 					icon: "plus",
 					theme: o.theme
-				});
-
-		if ( !collapsibleSet.length ) {
-			collapsibleHeading
-				.find( "a" ).first().add( collapsibleHeading.find( ".ui-btn-inner" ) )
-					.addClass( "ui-corner-top ui-corner-bottom" );
-		} else {
-			// If we are in a collapsible set
-
-			// Initialize the collapsible set if it's not already initialized
-			if ( !collapsibleSet.jqmData( "collapsiblebound" ) ) {
-
-				collapsibleSet
-					.jqmData( "collapsiblebound", true )
-					.bind( "expand", function( event ) {
-
-						$( event.target )
-							.closest( ".ui-collapsible" )
-							.siblings( ".ui-collapsible" )
-							.trigger( "collapse" );
-
-					});
-			}
-
-			collapsiblesInSet.first()
-				.find( "a" )
-					.first()
-					.addClass( "ui-corner-top" )
-						.find( ".ui-btn-inner" )
-							.addClass( "ui-corner-top" );
-
-			collapsiblesInSet.last()
-				.jqmData( "collapsible-last", true )
-				.find( "a" )
-					.first()
-					.addClass( "ui-corner-bottom" )
-						.find( ".ui-btn-inner" )
-							.addClass( "ui-corner-bottom" );
-
-
-			if ( collapsible.jqmData( "collapsible-last" ) ) {
-				collapsibleHeading
-					.find( "a" ).first().add ( collapsibleHeading.find( ".ui-btn-inner" ) )
-						.addClass( "ui-corner-bottom" );
-			}
-		}
+				})
+			.add( ".ui-btn-inner" )
+				.addClass( "ui-corner-top ui-corner-bottom" );
 
 		//events
 		collapsible

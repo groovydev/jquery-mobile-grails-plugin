@@ -10,12 +10,18 @@ Including the resources
 
 You must use the Grails resources framework to make use of this plugin. The resources exposed by this plugin are:
 
-    jquery-mobile - jQuery mobile framework css and js (version 1.0rc1)
+    jquery-mobile - jQuery mobile framework css and js (version 1.0 final)
 
 Usage
 -----
 
     <r:require modules="jquery-mobile"/>
+    
+Versioning
+----------
+
+Pluging version pattern is <jq-mobile-version>.<plugin-version>
+
 
 Copyright and License
 ---------------------
