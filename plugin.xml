@@ -1,4 +1,4 @@
-<plugin name='jquery-mobile' version='1.0.3' grailsVersion='1.3.7 &gt; *'>
+<plugin name='jquery-mobile' version='1.0.4' grailsVersion='1.3.7 &gt; *'>
   <author>Karol Balejko</author>
   <authorEmail>kb@groovydev.org</authorEmail>
   <title>Plugin jQuery mobile framework resource files</title>
